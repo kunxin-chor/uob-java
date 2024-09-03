@@ -17,6 +17,7 @@ public class L01Intro {
 
         // Strings (must be defined with double quotes)
         // String are objects in JavaScript
+        // (not a primitive data type but it functions like one)
         String sentence = "She sells seashell at the seashore";
         String word = "hello";
 
