@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 
 public class L03GenericCollection {
     public static void main(String[] args) {
@@ -23,6 +25,23 @@ public class L03GenericCollection {
 
         System.out.println(names);
 
+        // Map (is known as key/value pair - dictionary (Python) and objects (JavaScript))
+        // we have to define the data type of the key and the value
+        Map<String, Integer> months = new HashMap<String,Integer>(); // the key is String and the values are integers
+        months.put("Jan", 31);  // months["Jan"] = 31 (Python syntax)
+        months.put("Feb", 28); // months["Feb"] = 28;
+        months.put("Mar", 30); // months["Mar"] = 30;
+        
+        System.out.println(months.get("Jan"));
+        System.out.println("There are " + months.get("Feb") + " days in Feburary");
+
+        // When using generic collections, the data type in <> must be
+        // the class-eqv. of the primitive data type if we want the collection
+        // to store a primitive data type
+        // ArrayList<int> primeNumbers = new ArrayList<int> // <-- WON'T WORK
+        ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+        ArrayList<Double> ratios = new ArrayList<Double>();
+        ArrayList<Boolean> switches = new ArrayList<Boolean>();
 
     }
 }
