@@ -26,7 +26,7 @@ public class Main {
         ArrayList<Product> catalog = new ArrayList<>();
         catalog.add(new DigitalProduct("Lord of the Rings Ebook", "EBK1", 50, "mp3", "lotr.mp3", 20000));
         catalog.add(new PhysicalProduct("ACME Anvil", "ACME01", 2000, 5, 50));
-        
+    
         
         for (Product p : catalog) {
             // when Java complies the program 

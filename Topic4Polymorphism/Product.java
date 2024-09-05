@@ -1,6 +1,9 @@
 package Topic4Polymorphism;
 
-public class Product {
+// Product is an ABSTRACT class
+// it has to be because it has at least one abstract method
+// note: an abstract class can have no abstract methods
+public abstract class Product {
     protected String name;
     protected String sku;
     protected double price;
@@ -43,9 +46,9 @@ public class Product {
         this.price = price;
     }
 
-    public double calculateTotalPrice() {
-        return price;
-    }
+    // abstract method is empty
+    // it's for children classes to implement
+    public abstract double calculateTotalPrice();
 
     
 }
