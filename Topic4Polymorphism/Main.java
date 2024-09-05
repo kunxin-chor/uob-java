@@ -9,8 +9,8 @@ public class Main {
         // 1. A more generic reference can store 
         // a more specific object if they are in the same
         // class hierarchy
-        Product product = new DigitalProduct();
-        Product product2 = new PhysicalProduct();
+        // Product product = new DigitalProduct();
+        // Product product2 = new PhysicalProduct();
 
         // one issue: since the variable type is `Product`
         // we cannot use it to refer any of the methods
@@ -18,16 +18,23 @@ public class Main {
         // product.getFileName(); // <-- does not work
 
         // this works, BUT is considered bad practice
-        ((DigitalProduct)product).getFileName();
+        // ((DigitalProduct)product).getFileName();
 
         // if a reference of a more generic type can
         // store an instance of a more specific type
         // that's the case for ArrayList and other collections
         ArrayList<Product> catalog = new ArrayList<>();
-        catalog.add(new DigitalProduct());
-        catalog.add(new PhysicalProduct());
+        catalog.add(new DigitalProduct("Lord of the Rings Ebook", "EBK1", 50, "mp3", "lotr.mp3", 20000));
+        catalog.add(new PhysicalProduct("ACME Anvil", "ACME01", 2000, 5, 50));
+        
+        
         for (Product p : catalog) {
-           // System.out.println(p);
+            // when Java complies the program 
+            // it has NO IDEA if p is a digital product or physical product
+            // polymorphism happens depending on the specific type of p
+            // there will be a different behaviour
+            System.out.println(p.getName() + " = " + p.calculateTotalPrice());
+
         }
 
 
