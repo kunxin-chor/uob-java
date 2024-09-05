@@ -3,7 +3,7 @@ package Topic4Polymorphism;
 // Product is an ABSTRACT class
 // it has to be because it has at least one abstract method
 // note: an abstract class can have no abstract methods
-public abstract class Product {
+public abstract class Product implements Purchaseable {
     protected String name;
     protected String sku;
     protected double price;
@@ -50,5 +50,10 @@ public abstract class Product {
     // it's for children classes to implement
     public abstract double calculateTotalPrice();
 
+    public String getPurchaseSummary() {
+        // the calculateTotalPrice() call will use the
+        // child class' version (if it is overriden)
+        return "Price: " + calculateTotalPrice();
+    }
     
 }

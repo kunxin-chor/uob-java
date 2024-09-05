@@ -37,6 +37,17 @@ public class Main {
 
         }
 
+        // we can add DigitalProduct or PhysicalProduct to an array list of purchasable
+        // because Product implements Purchasable
+        ArrayList<Purchaseable> purchaseSummary = new ArrayList<>();
+        purchaseSummary.add(new DigitalProduct("Lord of the Rings Ebook", "EBK1", 50, "mp3", "lotr.mp3", 20000));
+        purchaseSummary.add(new Subscription("Prime Movies", 2.5, 30, new ArrayList<String>()));
+
+        for (Purchaseable purchase : purchaseSummary) {
+            System.out.println(purchase.getPurchaseSummary());
+        }
+
+
 
 
 
