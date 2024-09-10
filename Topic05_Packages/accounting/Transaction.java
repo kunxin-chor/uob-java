@@ -1,5 +1,7 @@
 package Topic05_Packages.accounting;
 
+// if a class is public, then it's shared ACROSS packages
+// ALL OTHER PACKAGES can access
 public class Transaction {
     private double amount;
     private Long senderID;
